@@ -1,9 +1,3 @@
-- title: Home
-  url: /
-- title: About
-  url: /about
-- title: Portfolio
-  url: /portfolio
 - title: Email
   url: mailto:duong.tra@northeastern.edu
   icon: fas fa-envelope
@@ -11,5 +5,5 @@
   url: https://www.linkedin.com/in/thu-trang-duong/
   icon: fab fa-linkedin
 - title: GitHub
-  url: https://github.com/Trangthu510
+  url: https://github.com/vfvong
   icon: fab fa-github
