@@ -30,7 +30,7 @@ twitter_username: none
 github_username:  Trangthu510
 
 # Build settings
-theme: jekyll-theme-awesome
+theme: jekyll-theme-modernist
 plugins:
   - jekyll-feed
 
