@@ -1,0 +1,12 @@
+- title: Home
+  url: /
+- title: About
+  url: /about.html
+- title: Archive
+  url: /archive.html
+- title: Email
+  url: mailto:duong.tra@northeastern.edu
+  icon: fas fa-envelope
+- title: GitHub
+  url: https://github.com/Trangthu510
+  icon: fab fa-github
