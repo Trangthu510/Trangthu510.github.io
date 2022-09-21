@@ -2,7 +2,7 @@
 layout: post
 title: "SOMETHING ABOUT ME"
 date: 2022-09-21 12:37:00 -0000
-categories: CATEGORY-1 CATEGORY-2
+permalink: /about/
 ----
 
 • In addition to doing my job effectively, another of my ambitions is to enhance the working environment in any organization that employs me. Through my positions in different organizations from Vietnam to Finland, I have recognized that while I thrive when working independently, I am also fulfilled when I am a member of a successful team.
