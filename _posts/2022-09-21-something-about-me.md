@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: "SOMETHING ABOUT ME"
 date: 2022-09-21 12:37:00 -0000
 permalink: /about/
