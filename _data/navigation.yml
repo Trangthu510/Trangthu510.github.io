@@ -2,8 +2,8 @@
   url: /
 - title: About
   url: /about.html
-- title: Archive
-  url: /archive.html
+- title: Portfolio
+  url: /portfolio.html
 - title: Email
   url: mailto:duong.tra@northeastern.edu
   icon: fas fa-envelope
