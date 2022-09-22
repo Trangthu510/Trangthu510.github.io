@@ -2,9 +2,18 @@
 layout: page
 ---
 
-{{ content }}
+<html>
 
-<img src="image 1.jpg" alt="Me in USA">
+<body>
+
+  <h2>HTML Image</h2>
+  <img src="image 1.jpg" alt="I am in USA" width="500" height="600">
+
+</body>
+
+</html>
+
+{{ content }}
 
 {% if page.type == "years" %}
   {% include archive-by-years.html %}
