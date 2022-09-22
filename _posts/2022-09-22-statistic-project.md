@@ -5,6 +5,7 @@ author: [Trang Duong]
 categories: [Statistic, Data-Analytics, Simulation]
 tags: [alcohol, life]
 math: true
+permalink: /portfolio/
 ---
 
 **Howdy!** This is an statistic project that I found out how interested the R square as well as regression model 
