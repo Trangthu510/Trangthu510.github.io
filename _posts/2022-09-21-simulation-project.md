@@ -1,7 +1,7 @@
 ---
 title: STOCHASTIC SIMULATION MODEL DEVELOPMENT FOR COVID-19 HOSPITALIZATION
 date: 2022-05-20
-layout: portfolio
+layout: post
 author: [Trang Duong]
 categories: [Simulation]
 tags: [hospital, queing system]
