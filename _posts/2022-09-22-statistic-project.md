@@ -2,7 +2,7 @@
 layout: post
 title: Statistic Project - How the R square look like?
 author: [Trang Duong]
-categories: [Statistic, Data-Analytics, Simulation]
+categories: [Statistic]
 tags: [alcohol, life]
 math: true
 ---
