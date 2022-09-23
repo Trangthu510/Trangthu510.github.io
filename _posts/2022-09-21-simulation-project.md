@@ -30,20 +30,13 @@ In the past 20 years, simulation has been an important tool for hospitals as dec
 
 <html> 
 <body> 
-
-<video width="400" controls>
-  <source src="/assets/technical-support-call-simulation-1.mp4" type="video/mp4">
-</video>
 <!DOCTYPE html>
 <html>
 <body>
 
-<h2>HTML Image</h2>
-<img src="/assets/image1.jpeg" alt="I am in USA" width="600" height="500">
+<iframe width="420" height="345" src="https://youtu.be/XN7vQMppY-s">
+</iframe>
 
 </body>
-</html>
-
-</body> 
 </html>
 
