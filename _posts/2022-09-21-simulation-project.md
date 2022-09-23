@@ -30,12 +30,11 @@ In the past 20 years, simulation has been an important tool for hospitals as dec
 
 <html> 
 <body> 
-<!DOCTYPE html>
+
 <html>
 <body>
 
-<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XN7vQMppY-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </body>
 </html>
