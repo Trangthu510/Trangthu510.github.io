@@ -6,6 +6,15 @@ permalink: /about/
 ---
 Hi, I am Trang Duong. Welcome everyone to personal journey of a life-long learner. This is where I host my portfolio of projects I've done in the past. My areas of interest are ***Data analytics, Supply Chain and Logistic, and Simulation Analysis***
 
+<html>
+<body>
+
+<h2>HTML Image</h2>
+<img src="/assets/IMG_7523" alt="Foiliage in America" width="621" height="414">
+
+</body>
+</html>
+
 ### My study journey:
 ***“The important thing is not to stop questioning. Curiosity has its own reason for existence. One cannot help but be in awe when he contemplates the mysteries of eternity, of life, of the marvelous structure of reality. It is enough if one tries merely to comprehend a little of this mystery each day. Never lose a holy curiosity” – Albert Einstein***
 
