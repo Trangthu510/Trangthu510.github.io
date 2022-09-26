@@ -18,8 +18,6 @@ I have been applied Arena in different models included Technical Support in Call
 Arena gave me  a general idea of how a queing system look like, helped me to understand the logic of a simulation question that normally hard to imagine sometime.
 
 ## APPLICATIONS:
-<html>
-<body>
 
 ### TECHNICAL SUPPORT CALL CENTER SIMULATION:
 
@@ -35,5 +33,3 @@ Arena gave me  a general idea of how a queing system look like, helped me to und
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/e3ruNl9s9uw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<html>
-<body>
