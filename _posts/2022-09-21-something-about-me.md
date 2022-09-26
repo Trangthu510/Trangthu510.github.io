@@ -10,7 +10,7 @@ Hi, I am Trang Duong. Welcome everyone to personal journey of a life-long learne
 <body>
 
 <h2>HTML Image</h2>
-<img src="/assets/IMG_7523" alt="Foiliage in America" width="621" height="414">
+<img src="/assets/IMG_7523.JPG" alt="Foiliage in America" width="621" height="414">
 
 </body>
 </html>
