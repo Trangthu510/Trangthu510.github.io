@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Life Expectancy and Related Variables
+title: LIFE EXPECTANCY AND RELATED VARIABLES
 author: [Trang Duong]
 categories: [Statistic]
 tags: [alcohol, life, heath-expenditure]
