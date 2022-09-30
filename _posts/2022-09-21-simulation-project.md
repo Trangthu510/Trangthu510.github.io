@@ -15,15 +15,4 @@ In the past 20 years, simulation has been an important tool for hospitals as dec
 ## Collect and Process
 
 
-<figure align="center">
-	<img align="center" src="/assets/images/collegeexam2020/site.jpg">
-</figure>
-
-<figure align="center">
-	<img align="center" src="/assets/images/collegeexam2020/site2.jpg" >
-	<figcaption>
-		Website for scraping
-	</figcaption>
-</figure>
-
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Income data to forecast the tip and divide turn
+title: INCOME FORECASTING AND PROCESS OF DIVIDING TURN
 author: [Trang Duong]
 categories: [Data Analysis]
-tags: [alcohol, life, heath-expenditure]
+tags: [income analysis, working turns]
 ---
