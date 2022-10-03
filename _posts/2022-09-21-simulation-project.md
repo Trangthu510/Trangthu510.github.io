@@ -28,14 +28,25 @@ Once the patient is assigned a bed, they may not remain there for the entirety o
 A patient may leave the system through death or recovery and discharge. Death may occur in patients either in the ICU or in regular impatient beds. Recovery and discharge can similarly occur in patients located in either beds. 
 
 ## DATA DESCRIPTION:
+
+### DESCRIPTION:
 Two datasets are provided to support the project, including:
 (1) “hospitalization.csv” including the hospital admission information and (2) “ICU.csv” including ICU admission information. Input model parameters were estimated using the given dataset.
 
 The first step was to prepare the data for use in the model by performing some data cleaning. Each patient used the same PAT_ID but a different PAT_ENC_CSN_ID since they could re-enter the hospital for several times. Therefore, I assumed to consider a re-enter patient as a new one for every different visit. 
 
 Secondly, In order to more effectively utilize the ICU data from the second dataset, the group merged this dataset with the hospitalization data. This way, it was easier to observe which patients were hospitalized in the ICU, and which remained in regular impatient beds. Since the dates in the ICU dataset only contain the day of patient arrival/departure and not the specific time, the group decided to ignore the time part of the date in the hospitalization data. For example, patient 15134993 was admitted on April 1 2020 at 16:41:00 (shown in the dataset as 01APR2020: 16:41:00). The group removed the time portion of this entry so the hospital admission time now shows only 01APR2020. 
-
+ 
+ ### PROBABILITY CALCULATION:
 To simplify the model, I assumed that only one transfer at most occurs for patients. This means that if a patient is transferred from a regular to ICU bed, they will stay in the ICU bed and not transfer back to a regular bed. With this information, several probabilities were calculated. 
 
-<img src="/assets/Simulation-photos/probability-calculation.png" alt="Logical simulation model thinking" width="653" height="145">
+<img src="/assets/Simulation-photos/probability-calculation.png" alt="Probability Calculation" width="628" height="274">
+
+### PLOT OF PATIENT ARRIVALS:
+In order to apply the Non-Stationary Poisson process into the simulation model, I first have to calculate different lambda for each periods (in here I divided into weeks) and then I ploted them to easily understand their distribution.
+
+<img src="/assets/Simulation-photos/different-lambda.png" alt="Lambda Calculations" width="632" height="348">
+
+## INPUT MODELING & PARAMETER ESTIMATION:
+
 
