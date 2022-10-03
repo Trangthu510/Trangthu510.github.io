@@ -8,11 +8,34 @@ tags: [hospital, queing system]
 topics: data analytics
 summary: "In this paper, the group developed a stochastic simulation model for Healthcare System management during the COVID-19 pandemic. The model focuses on the Emergency Department (ED) from the diagnosis of patient arrivals with COVID-19 to the death or discharge of the patient from the hospital. It also considers the fact that once admitted and initial tests are conducted, patients who are assigned to a bed in the Intensive Care Unit (ICU) or a Regular Impatient Bed will often switch between the 2 as their condition improves or worsens. The patients who have the most serious cases of COVID-19 will be placed in ICU beds which are the bottleneck to hospitals effectively saving COID-19 patients due to their low resource capacity. As a result, the model focuses heavily on utilizing ICU beds most effectively. This model was developed with the purpose of aiding Hospitals in minimizing COVID deaths with the optimal allocation of resources with a focus on ICU beds. Our results showed that at least 90 ICU are needed to serve the same amount of arrival for COVID-19 patients without any wait time. Since the model can be applied to a variety of different hospital’s situation, it can be used by hospital manager’s find out their possible capacity and solutions to improve services."
 ---
-## Introduction  
+
+- toc
+{: toc } 
+
+## INTRODUCTION:  
 In the past 20 years, simulation has been an important tool for hospitals as decision support systems. Before COVID-19, simulation models created for hospitals served various purposes such as the optimization of staff scheduling, resource allocation, and the minimization of patient wait times. However, such models are not of use unless the data they are developed from is accurate and representative of real-time hospital processes. The recent growth in use of simulation in the hospital setting can therefore be at least partially due to the improvement in technology and analytics that allows for a high-volume of real-time discrete data for use. 
-## Ask      
 
-## Collect and Process
+In this project, I developed a discrete-event simulation model of an emergency department dealing with COVID-19 treatment of patients. This simulation will be used to assess the system performance of the emergency department, predict future responses, and guide decision making at the management level. We will be considering various hospital resources including nurse and doctor staff, equipment (ventilators), and hospital beds (both regular and ICU). Using anonymous hospital data about COVID-19 patient admittance and through research about typical hospital ICU and regular bed capacities, we were able to accurately capture the treatment process of patients with COVID-19. This typically involves movement between both ICU and regular impatient beds before the patient exits the system through hospital discharge after recovery or through death.
 
+## PROBLEM DESCRIPTION:
 
+<img src="/assets/Simulation-photos/logical-thinking.png" alt="Logical simulation model thinking" width="653" height="145">
+
+First, the patient arrives into the system. The patient will either be admitted to the hospital or rejected. Patient admission to the hospital is based on severity. Due to limited hospital resources, only the patients who are at the highest risk will be admitted. Admission is also dependent on if there is space in the Emergency Department (ED) and enough resources available for the patient. After Admission, patients are given a series of lab tests and initial treatments to determine the severity of the disease. During the triage process step, the patient’s tests and vital measurements are reviewed in order to decide whether the patient should be sent to the ICU or a regular impatient bed. The ICU is reserved for the most severe cases of COVID-19 in which patients require ventilators to help their breathing and constant monitoring by hospital staff. 
+
+Once the patient is assigned a bed, they may not remain there for the entirety of their hospital stay. If their disease worsens, they may move from a regular impatient bed to an ICU bed. While if a patient in an ICU bed begins to improve, they may be moved to a regular impatient bed for the remainder of their stay. This is so the limited ICU beds and resources can be reserved for only the patients who really need it. Although in reality patients may move multiple times between an ICU bed and a regular impatient bed, for simplicity purposes in our model we will assume that patients will only move once between the two. For example, if a patient moves from an ICU bed to a regular impatient bed, our model assumes that they will remain in a regular impatient bed until they leave the system. 
+
+A patient may leave the system through death or recovery and discharge. Death may occur in patients either in the ICU or in regular impatient beds. Recovery and discharge can similarly occur in patients located in either beds. 
+
+## DATA DESCRIPTION:
+Two datasets are provided to support the project, including:
+(1) “hospitalization.csv” including the hospital admission information and (2) “ICU.csv” including ICU admission information. Input model parameters were estimated using the given dataset.
+
+The first step was to prepare the data for use in the model by performing some data cleaning. Each patient used the same PAT_ID but a different PAT_ENC_CSN_ID since they could re-enter the hospital for several times. Therefore, I assumed to consider a re-enter patient as a new one for every different visit. 
+
+Secondly, In order to more effectively utilize the ICU data from the second dataset, the group merged this dataset with the hospitalization data. This way, it was easier to observe which patients were hospitalized in the ICU, and which remained in regular impatient beds. Since the dates in the ICU dataset only contain the day of patient arrival/departure and not the specific time, the group decided to ignore the time part of the date in the hospitalization data. For example, patient 15134993 was admitted on April 1 2020 at 16:41:00 (shown in the dataset as 01APR2020: 16:41:00). The group removed the time portion of this entry so the hospital admission time now shows only 01APR2020. 
+
+To simplify the model, I assumed that only one transfer at most occurs for patients. This means that if a patient is transferred from a regular to ICU bed, they will stay in the ICU bed and not transfer back to a regular bed. With this information, several probabilities were calculated. 
+
+<img src="/assets/Simulation-photos/probability-calculation.png" alt="Logical simulation model thinking" width="653" height="145">
 
