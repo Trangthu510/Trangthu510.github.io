@@ -49,4 +49,31 @@ In order to apply the Non-Stationary Poisson process into the simulation model, 
 
 ## INPUT MODELING & PARAMETER ESTIMATION:
 
+## SIMULATION IMPLEMENTATION METHOD:
 
+### SIMULATION MODEL CODE:
+The simulation code is run on Python. A brief overview of the steps conducted in the writing and implementation of the code is provided below: 
+
+- Import code files which are used in the module. 
+
+- Initiate the Random seed to ensure the same outcome every time.
+
+- Define the patient waiting queues from SimClasses to record the patient’s waiting for the regular bed and ICU bed. 
+
+- Define the queues to record the patients that are already being treated. 
+
+- Initiate the DTStat from SimClasses for collecting the time of different processes in the system. 
+
+Every detail of the code will be find in the Simulation Repository in my GitHub.
+
+In this section, the main components of the simulation model code are further explained. This includes the patient arrival method (non-stationary method), the process for removing patients from the queues for both ICU and regular beds, and simulation loop.  
+
+### SIMULATION MODEL VALIDATION:
+### SIMULATION MODEL VERIFICATION:
+
+<img src="/assets/Simulation-photos/queing-network.png" alt="Queing Network with p" width="620" height="208">
+
+<img src="/assets/Simulation-photos/queing-network-calculation.png" alt="Lambda Calculations" width="635" height="274">
+
+## OUTPUTS ANALYSIS:
+## CONCLUSION:
