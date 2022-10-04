@@ -37,7 +37,7 @@ The first step was to prepare the data for use in the model by performing some d
 
 Secondly, In order to more effectively utilize the ICU data from the second dataset, the group merged this dataset with the hospitalization data. This way, it was easier to observe which patients were hospitalized in the ICU, and which remained in regular impatient beds. Since the dates in the ICU dataset only contain the day of patient arrival/departure and not the specific time, the group decided to ignore the time part of the date in the hospitalization data. For example, patient 15134993 was admitted on April 1 2020 at 16:41:00 (shown in the dataset as 01APR2020: 16:41:00). The group removed the time portion of this entry so the hospital admission time now shows only 01APR2020. 
  
- ### PROBABILITY CALCULATION:
+### PROBABILITY CALCULATION:
 To simplify the model, I assumed that only one transfer at most occurs for patients. This means that if a patient is transferred from a regular to ICU bed, they will stay in the ICU bed and not transfer back to a regular bed. With this information, several probabilities were calculated. 
 
 <img src="/assets/Simulation-photos/probability-calculation.png" alt="Probability Calculation" width="628" height="274">
@@ -48,6 +48,44 @@ In order to apply the Non-Stationary Poisson process into the simulation model, 
 <img src="/assets/Simulation-photos/different-lambda.png" alt="Lambda Calculations" width="632" height="348">
 
 ## INPUT MODELING & PARAMETER ESTIMATION:
+From the ICU data, the group was able to determine the exact patients who stayed in the ICU, these patients' arrival date into the ICU, and their departure date from the ICU. The group was able to calculate the duration of each patient’s ICU stay by calculating the difference between the departure and arrival dates. Each patient’s ICU stay duration was used to calculate the average number of days a patient spends in the ICU. 
+
+However, the data provided included people that stay in an ICU bed upon arrival and also people who will transfer to an ICU bed from a regular bed. After sorting the data set by date-time, the group was able to determine the order of beds the patient stayed in (regular vs ICU) and what the next event would be for them based on the calculated probability. Therefore, we have two data sets for the ICU service time depending on the path the patient took between the ICU and regular beds. Following that logic, we have two distributions for ICU bed service time shown below using Arena.
+
+### Arena service time for patients who stay in an ICU bed first (ICU queue)
+Distribution: Lognormal 
+
+Expression: 0.5 + LOGN(13.2, 30.4)
+
+Square Error: 0.006599
+
+### Arena service time for patients who move from a RB to ICU bed (transfer queue)
+
+Distribution: Exponential   
+
+Expression: 0.999 + EXPO(13.8)
+
+Square Error: 0.005205
+
+From the hospitalziation dataset, the group determined the number of days that a patient spends in the system by observing the hospital admission time and the end date. This was considered the amount of time that a patient stays in a regular hospital bed. Moreover, similar to the logic of the ICU bed above, we can also create two different distributions of service time depending on the order the patient stays in the ICU beds or regular beds. These distributions were found using Arena software. 
+
+### Arena service time for patients stay in RB first (RB queue)
+Distribution: Lognormal
+
+Expression: 0.5 + LOGN(7.82, 8.32)
+
+Square Error: 0.000663
+
+### Arena service time for patients that move from an ICU bed to RB (transfer queue)
+
+Distribution: Lognormal
+
+Expression: 0.5 + LOGN(8.87, 13.3)
+
+Square Error: 0.004928
+
+***WHY different distributions are IMPORTANT?***
+**Because the patient rate based on the real-data set is changed all the time depend on different period. Different distributions will tell you the behind story about pandemic situation and will make the model bcome much more realistic**
 
 ## SIMULATION IMPLEMENTATION METHOD:
 
