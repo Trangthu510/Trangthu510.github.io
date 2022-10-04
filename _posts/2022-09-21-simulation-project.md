@@ -85,7 +85,7 @@ Expression: 0.5 + LOGN(8.87, 13.3)
 Square Error: 0.004928
 
 ***WHY different distributions are IMPORTANT?***
-Because the patient rate based on the real-data set is changed all the time depend on different period. Different distributions will tell you the behind story about pandemic situation and will make the model become much more realistic.
+Because patient rates based on two real-data sets are changed all the time, which depend on different periods. Thus, different distributions will tell you a behind story about the pandemic situation and will make the model become much more realistic.
 {: .message }
 
 ## SIMULATION IMPLEMENTATION METHOD:
@@ -103,7 +103,7 @@ The simulation code is run on Python. A brief overview of the steps conducted in
 
 - Initiate the DTStat from SimClasses for collecting the time of different processes in the system. 
 
-Every detail of the code will be find in the Simulation Repository in my GitHub.
+Every detail of the code will be found in the Simulation Repository in my GitHub.
 
 In this section, the main components of the simulation model code are further explained. This includes the patient arrival method (non-stationary method), the process for removing patients from the queues for both ICU and regular beds, and simulation loop.  
 
@@ -115,4 +115,11 @@ In this section, the main components of the simulation model code are further ex
 <img src="/assets/Simulation-photos/queing-network-calculation.png" alt="Lambda Calculations" width="635" height="274">
 
 ## OUTPUTS ANALYSIS:
+Running the simulation model with the arrival rates previously calculated resulted in an average wait time of around 54 days for regular impatient beds and an average of about 48 days for ICU beds. Since this data is from the peak of the COVID-19 outbreak, it makes sense that the wait times would be so long as all hospitals were over capacity during this time period. In order to decrease the waiting time for both regular and ICU beds, the number of resources available (number of beds) will have to increase. To determine the optimal number of resources to decrease the wait times of both the ICU and regular beds to 1 hour or less, the group tested many resource levels over various simulation runs as shown in the sensitivity analysis. 
+
 ## CONCLUSION:
+I have developed a stochastic simulation model using real hospital data to support the model. Using this model, hospitals would be able to determine the optimal number of resources required to effectively serve all COVID-19 patients, therefore maximizing patient treatment and minimizing patient deaths. The main purpose of this model is focusing on simulating a model that yields a result close to the real data set. However, the group is also able to use this simulation to calculate different variables that the data set did not provide in the first place and to observe the effects of changes in variables on the system performance. Therefore, this simulation model can be altered to meet the specific needs of different systems. 
+
+With future work, the group hopes to be able to expand the model to include more accurate measures of system performance using more advanced simulation techniques while also including additional resources and entity attributes such as hospital staff, ventilators and other hospital equipment, and patient severity levels. This will allow the model to be more flexible and useful to the end-users.
+
+
