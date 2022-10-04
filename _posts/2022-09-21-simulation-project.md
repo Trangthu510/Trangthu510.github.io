@@ -85,7 +85,8 @@ Expression: 0.5 + LOGN(8.87, 13.3)
 Square Error: 0.004928
 
 ***WHY different distributions are IMPORTANT?***
-**Because the patient rate based on the real-data set is changed all the time depend on different period. Different distributions will tell you the behind story about pandemic situation and will make the model bcome much more realistic**
+Because the patient rate based on the real-data set is changed all the time depend on different period. Different distributions will tell you the behind story about pandemic situation and will make the model become much more realistic.
+{: .message }
 
 ## SIMULATION IMPLEMENTATION METHOD:
 
