@@ -108,10 +108,13 @@ Every detail of the code will be found in the Simulation Repository in my GitHub
 In this section, the main components of the simulation model code are further explained. This includes the patient arrival method (non-stationary method), the process for removing patients from the queues for both ICU and regular beds, and simulation loop.  
 
 ### SIMULATION MODEL VALIDATION:
-### SIMULATION MODEL VERIFICATION:
+In the data provided, patient arrivals per day fluctuated but the total arrivals to the system over the period that the data was collected reached 4,798.  In the simulation model, as can be seen later in the report, the arrival rate for patients was around 4,700 patients in total, fluctuating slightly with each replication. Because the only data was not provided is the number of resources that led to the arrival number will be the only result that will not be changed in the simulation.  Since both of these arrivals are close to each other, I could validate that the model is working as intended.
 
+### SIMULATION MODEL VERIFICATION:
+The first queing network below is the general idea how I calculate the probability. Therefore, people will understand why we need to figrure it out different distribution for each patient's rate.
 <img src="/assets/Simulation-photos/queing-network.png" alt="Queing Network with p" width="620" height="208">
 
+By using p1-p6 (probabilities calculation) and different lambda, we can calulate the average wait time and average amount of day each patient spend in the hospital. Everything we got from the formula will be the foundation to the final result from Python model.
 <img src="/assets/Simulation-photos/queing-network-calculation.png" alt="Lambda Calculations" width="635" height="274">
 
 ## OUTPUTS ANALYSIS:
