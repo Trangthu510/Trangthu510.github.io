@@ -58,14 +58,17 @@ After running all the files on AMPL Console, I get the result as the picture bel
 
 The result is an optimal solution to minimize the cost but at the same time satisfy all the requirements. 
 Since the unit of all parameter is per 100gr, therefore, as the solution, I should eat per day:
+- 200gr Apple
 - 50gr Broccoli
-- 292gr Carrot
-- 50gr Cereal
-- 100gr Egg (equals to 2 eggs)
-- 118gr Ground Pork
-- 9gr Pork Belly
-- 28gr Quinnoa
-With this portion I will consume enough calories, protein, fat, fiber and sugar everyday. Moreover, it will only cost me $9.01.
+- 170gr Carrot
+- 17gr Cereal
+- 116gr Ground Pork
+- 186gr Quinoa
+- 100gr Rice
+- 400gr Potato
+- 100gr Egg (equal to 2 eggs)
+
+With this portion I will consume enough calories, protein, fat, fiber and sugar everyday. Moreover, it will only cost me $8.4.
 
 Of course, there are always some food you prefer more or you wanna come up with a solution with exactly some type of foods. Thus, changing parameter and their contraints will help you to customize your solution. 
 
