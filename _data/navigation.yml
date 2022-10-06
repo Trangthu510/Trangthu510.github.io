@@ -1,7 +1,7 @@
 - title: About
   url: /about
-- title: CV
-  url: /CV
+- title: Resume
+  url: /resume
 - title: Portfolio
   url: /portfolio
 - title: Email
@@ -14,4 +14,3 @@
   url: https://github.com/Trangthu510
   icon: fab fa-github
 
-  
